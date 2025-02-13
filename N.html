@@ -9,6 +9,8 @@
             background-color: #fffae5;
             text-align: center;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .header {
             background-color: #337ab7;
@@ -23,7 +25,13 @@
             width: 50px;
             height: 50px;
         }
-        .logout {
+        .button {
+            background-color: transparent;
+            border: none;
+            color: red;
+            font-weight: bold;
+            padding: 10px 20px;
+            font-size: 18px;
             cursor: pointer;
         }
         .container {
@@ -43,8 +51,13 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        .table-container {
+            overflow-x: auto; /* يجعل الجدول قابل للتمرير أفقياً في الموبايل */
+            width: 100%;
+        }
         table {
             width: 100%;
+            min-width: 600px; /* يمنع الجدول من الانكماش بشكل غير مناسب */
             border-collapse: collapse;
             margin-top: 20px;
         }
@@ -59,22 +72,33 @@
             color: red;
             margin-top: 20px;
         }
-        .button {
-    background-color: transparent; /* يجعل الزر شفافًا */
-    border: none; /* إضافة إطار باللون الأحمر */
-    color: red; /* لون الخط أحمر */
-    font-weight: bold; /* يجعل الخط عريضًا */
-    padding: 10px 20px; /* ضبط الهوامش الداخلية */
-    font-size: 18px; /* حجم الخط */
-    cursor: pointer; /* تغيير المؤشر عند التمرير */
-}
 
+        /* تحسين التصميم على الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+            .info {
+                display: block;
+                text-align: center;
+                padding: 10px;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header img {
+                width: 40px;
+                height: 40px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="photos\Screenshot 2025-02-13 194258.png" class="logo">
-        <button class="button" onclick="location.href='main.html'">خروج</button>
+        <img src="photos/Screenshot.png" class="logo">
+        <button class="button" onclick="location.href='index.html'">خروج</button>
     </div>
     <div class="container">
         <h2>عبدالرحمن محمد صابر عطوه سليمان</h2>
@@ -84,23 +108,25 @@
             <span>المعدل الفصلي (GPA): 2.570</span>
             <span>الساعات المجتازة: 17</span>
         </div>
-        <table>
-            <tr>
-                <th>كود المقرر</th>
-                <th>اسم المقرر</th>
-                <th>ساعات</th>
-                <th>نقاط</th>
-                <th>تقدير</th>
-                <th>ناجح</th>
-            </tr>
-            <tr><td>ACT101</td><td>مبادئ المحاسبة المالية (1)</td><td>3</td><td>2.75</td><td>+C</td><td>✔</td></tr>
-            <tr><td>MGT101</td><td>مبادئ الإدارة</td><td>3</td><td>2.25</td><td>+D</td><td>✔</td></tr>
-            <tr><td>MGT102</td><td>السلوك التنظيمي</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
-            <tr><td>ECN101</td><td>مبادئ الاقتصاد الجزئي</td><td>3</td><td>2.50</td><td>C</td><td>✔</td></tr>
-            <tr><td>STA101</td><td>رياضيات الأعمال</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
-            <tr><td>ELUACT100</td><td>موارد اقتصادية</td><td>2</td><td>2.75</td><td>+C</td><td>✔</td></tr>
-            <tr><td>ELUACT101</td><td>أخلاقيات مهنة المحاسبة</td><td>2</td><td>4.00</td><td>A</td><td>✔</td></tr>
-        </table>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>كود المقرر</th>
+                    <th>اسم المقرر</th>
+                    <th>ساعات</th>
+                    <th>نقاط</th>
+                    <th>تقدير</th>
+                    <th>ناجح</th>
+                </tr>
+                <tr><td>ACT101</td><td>مبادئ المحاسبة المالية (1)</td><td>3</td><td>2.75</td><td>+C</td><td>✔</td></tr>
+                <tr><td>MGT101</td><td>مبادئ الإدارة</td><td>3</td><td>2.25</td><td>+D</td><td>✔</td></tr>
+                <tr><td>MGT102</td><td>السلوك التنظيمي</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
+                <tr><td>ECN101</td><td>مبادئ الاقتصاد الجزئي</td><td>3</td><td>2.50</td><td>C</td><td>✔</td></tr>
+                <tr><td>STA101</td><td>رياضيات الأعمال</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
+                <tr><td>ELUACT100</td><td>موارد اقتصادية</td><td>2</td><td>2.75</td><td>+C</td><td>✔</td></tr>
+                <tr><td>ELUACT101</td><td>أخلاقيات مهنة المحاسبة</td><td>2</td><td>4.00</td><td>A</td><td>✔</td></tr>
+            </table>
+        </div>
         <p class="footer">لا تعتبر هذه النتيجة كمستند رسمي إلا بعد مراجعة الكلية واعتمادها.</p>
         <p class="footer">في حالة عدم ظهور النتيجة في هذه الصفحة بعد الإبلاغ عنها، يرجى الرجوع لشؤون الطلاب بالكلية لمعرفة سبب الحجب.</p>
     </div>
