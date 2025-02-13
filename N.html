@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة الطالب</title>
+    <style>
+        body {
+            background-color: #fffae5;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #337ab7;
+            color: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+        .logout {
+            cursor: pointer;
+        }
+        .container {
+            background-color: #f0e68c;
+            padding: 14px;
+            margin: 14px auto;
+            width: 56%;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .info {
+            display: flex;
+            justify-content: space-around;
+            background-color: #d3d3d3;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .footer {
+            color: red;
+            margin-top: 20px;
+        }
+        .button {
+    background-color: transparent; /* يجعل الزر شفافًا */
+    border: none; /* إضافة إطار باللون الأحمر */
+    color: red; /* لون الخط أحمر */
+    font-weight: bold; /* يجعل الخط عريضًا */
+    padding: 10px 20px; /* ضبط الهوامش الداخلية */
+    font-size: 18px; /* حجم الخط */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="photos\Screenshot 2025-02-13 194258.png" class="logo">
+        <button class="button" onclick="location.href='main.html'">خروج</button>
+    </div>
+    <div class="container">
+        <h2>عبدالرحمن محمد صابر عطوه سليمان</h2>
+        <div class="info">
+            <span>العام الأكاديمي: 2024-2023</span>
+            <span>المستوى: الثاني - الفصل الدراسي الثاني</span>
+            <span>المعدل الفصلي (GPA): 2.570</span>
+            <span>الساعات المجتازة: 17</span>
+        </div>
+        <table>
+            <tr>
+                <th>كود المقرر</th>
+                <th>اسم المقرر</th>
+                <th>ساعات</th>
+                <th>نقاط</th>
+                <th>تقدير</th>
+                <th>ناجح</th>
+            </tr>
+            <tr><td>ACT101</td><td>مبادئ المحاسبة المالية (1)</td><td>3</td><td>2.75</td><td>+C</td><td>✔</td></tr>
+            <tr><td>MGT101</td><td>مبادئ الإدارة</td><td>3</td><td>2.25</td><td>+D</td><td>✔</td></tr>
+            <tr><td>MGT102</td><td>السلوك التنظيمي</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
+            <tr><td>ECN101</td><td>مبادئ الاقتصاد الجزئي</td><td>3</td><td>2.50</td><td>C</td><td>✔</td></tr>
+            <tr><td>STA101</td><td>رياضيات الأعمال</td><td>3</td><td>3.00</td><td>B</td><td>✔</td></tr>
+            <tr><td>ELUACT100</td><td>موارد اقتصادية</td><td>2</td><td>2.75</td><td>+C</td><td>✔</td></tr>
+            <tr><td>ELUACT101</td><td>أخلاقيات مهنة المحاسبة</td><td>2</td><td>4.00</td><td>A</td><td>✔</td></tr>
+        </table>
+        <p class="footer">لا تعتبر هذه النتيجة كمستند رسمي إلا بعد مراجعة الكلية واعتمادها.</p>
+        <p class="footer">في حالة عدم ظهور النتيجة في هذه الصفحة بعد الإبلاغ عنها، يرجى الرجوع لشؤون الطلاب بالكلية لمعرفة سبب الحجب.</p>
+    </div>
+</body>
+</html>
